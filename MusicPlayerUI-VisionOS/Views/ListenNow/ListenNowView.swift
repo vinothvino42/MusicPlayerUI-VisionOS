@@ -21,11 +21,13 @@ struct ListenNowView: View {
                 .textFieldStyle(.roundedBorder)
                 
                 VStack(spacing: 8) {
-                    AlbumListView(heading: "Hot Playlists")
+                    SongsListView(heading: "2023 Top Hits")
                     SongsListView(heading: "Trending Songs")
-                    AlbumListView(heading: "Pop Shots")
+                    AlbumListView(heading: "Hot Playlists")
+                    SongsListView(heading: "New Releases")
                     AlbumListView(heading: "Discover Indie")
                     SongsListView(heading: "Stay Upbeat")
+                    AlbumListView(heading: "Pop Shots")
                 }
             }
         }
@@ -43,11 +45,6 @@ struct ListenNowView: View {
                 Button(action: {}, label: {
                     Image("avatar")
                 })
-            }
-        }
-        .toolbar {
-            ToolbarItemGroup(placement: .bottomOrnament) {
-                PlayerControlView()
             }
         }
     }

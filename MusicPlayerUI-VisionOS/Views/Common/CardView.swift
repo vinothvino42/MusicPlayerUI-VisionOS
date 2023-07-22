@@ -11,7 +11,14 @@ struct CardView: View {
     let title: String
     let subtitle: String
     let image: String
-    let isCircle: Bool = false
+    let isCircle: Bool
+    
+    init(title: String, subtitle: String, image: String, isCircle: Bool = false) {
+        self.title = title
+        self.subtitle = subtitle
+        self.image = image
+        self.isCircle = isCircle
+    }
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -19,7 +26,7 @@ struct CardView: View {
                 .resizable()
                 .scaledToFill()
                 .frame(height: 180)
-                .frame(maxWidth: 220)
+                .frame(maxWidth: 200)
                 .background(.orange)
                 .cardClipShape(isCircle: isCircle)
             
@@ -33,7 +40,6 @@ struct CardView: View {
             }
             .padding(.bottom)
         }
-        .frame(width: 220)
         .clipped()
     }
 }

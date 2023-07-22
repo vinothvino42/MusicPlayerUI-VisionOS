@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AlbumListView: View {
     let heading: String
-    let albums: [MediaItem] = MediaItem.getAlbums()
+    let albums: [MediaItem] = MediaItem.getAlbums().shuffled()
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -23,7 +23,7 @@ struct AlbumListView: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: 20) {
-                    ForEach(albums.shuffled()) { album in
+                    ForEach(albums) { album in
                         CardView(title: album.title, subtitle: album.artist, image: album.image)
                     }
                 }

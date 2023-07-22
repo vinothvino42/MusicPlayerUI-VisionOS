@@ -11,7 +11,7 @@ import SwiftUI
 struct MusicPlayerUI_VisionOSApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
         }
     }
 }

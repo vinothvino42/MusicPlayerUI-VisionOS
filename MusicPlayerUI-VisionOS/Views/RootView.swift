@@ -19,11 +19,18 @@ struct RootView: View {
             }
             .tag(0)
 
-            Text("Browse")
-                .tabItem {
-                    Label("Browse", systemImage: "play.square.stack")
-                }
-                .tag(1)
+            NavigationStack {
+                BrowseListView()
+            }
+            .tabItem {
+                Label("Browse", systemImage: "play.square.stack")
+            }
+            .tag(1)
+        }
+        .toolbar {
+            ToolbarItemGroup(placement: .bottomOrnament) {
+                PlayerControlView()
+            }
         }
     }
 }
