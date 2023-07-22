@@ -14,10 +14,10 @@ struct Artist: Identifiable, Hashable {
     
     static func getArtists() -> [Artist] {
         return [
-            Artist(name: "Adele", image: ""),
-            Artist(name: "John Mayer", image: ""),
-            Artist(name: "G-Eazy", image: ""),
-            Artist(name: "Nicky Jam", image: ""),
+            Artist(name: "Adele", image: "weekend"),
+            Artist(name: "John Mayer", image: "weekend"),
+            Artist(name: "G-Eazy", image: "weekend"),
+            Artist(name: "Nicky Jam", image: "weekend"),
         ]
     }
 }

@@ -16,6 +16,8 @@ struct MenuItem: Identifiable, Hashable {
         return [
             MenuItem(label: "Home", icon: "house"),
             MenuItem(label: "Search", icon: "magnifyingglass"),
+            MenuItem(label: "Artists", icon: "music.mic"),
+            MenuItem(label: "Songs", icon: "music.note"),
             MenuItem(label: "Your Library", icon: "book"),
         ]
     }
